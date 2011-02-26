@@ -35,7 +35,7 @@ double grade(double midterm, double final, double homework)
 
 double grade( double midterm, double final, const std::vector<double>& hw)
 {
-	if(hw.size==0)
+	if(hw.size() ==0)
 		throw std::domain_error("Student has done no homework");
 
 	return grade( midterm, final, median(hw) );
@@ -59,38 +59,34 @@ std::istream& read_hw( std::istream& in, std::vector<double>& hw) {
 
 int main (int argc, char * const argv[])
 {
-	  // insert code here...
-	std::cout << "Please enter your first name: " << std::endl;
+	// Ask for and read the students name
+	std::cout << "Please enter your first name: ";
 	std::string name;
-	std::cin >> name;
-	   std::cout << "Hello " << name << "!" << std::endl;
 
-	std::cout << "Please enter yo ur midterm and final exam grades: ";
+	std::cin >> name;
+	std::cout << "Hello, " << name << "!" << std::endl;
+
+	// ask for and read the midterm and final grades
+	std::cout << "Please enter your midterm and final exam grades: ";
 	double midterm, final;
 	std::cin >> midterm >> final;
 
-	// Ask for the homework grades
+	// ask for the homework grades
 	std::cout <<	"Enter all your homework grades, "
-					"followed by end-of-file: ";
+				    " followed by end-of-file: ";
 
-	// Store values in a vector
-	// A variable into which to read
-	double x;
 	std::vector<double> homework;
+	read_hw(std::cin, homework);
 
-	while(std::cin >> x) {
-		homework.push_back(x);
+	try {
+		double final_grade = grade(midterm, final, homework);
+		std::streamsize	prec = std::cout.precision();
+        std::cout <<	 "Your final grade is " << std::setprecision( 3 ) << final_grade << std::setprecision(prec) << std::endl;
+	} catch ( std::domain_error ) {
+		std::cout <<	"You must enter your grades. "
+					    "Please try again. " << std::endl;
+		return 1;
 	}
 
-	std::streamsize prec = std::cout.precision(); // Store precision
-	// Write out final grade
-	std::cout << "Your final grade is " << std::setprecision( 3 )
-	<< 0.2f * midterm + 0.4 * final + 0.4 * median( homework )
-	<< std::setprecision(prec) << std::endl;
-
-	//	std::streamsize prec = std::cout.precision();
-	//	std::cout	<< "Your final grade is " << std::setprecision(3)
-	//				<< 0.2 * midterm + 0.4 * final + 0.4 * sum/count
-	//				<< std::setprecision(prec) << std::endl;
-	   return 0;
+	return 0;
 }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a2ad5a9-cc7c-40ef-98a2-8eed1da5cfe3" name="Default" comment="" />
+    <list default="true" id="2a2ad5a9-cc7c-40ef-98a2-8eed1da5cfe3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter4.cpp" afterPath="$PROJECT_DIR$/src/Chapter4.cpp" />
+    </list>
     <ignored path="Chapter4.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,7 +73,7 @@
       <file leaf-file-name="Chapter4.cpp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Chapter4.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="0" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.776">
+            <state line="79" column="41" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.712">
               <folding />
             </state>
           </provider>
@@ -315,7 +317,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="1024" extended-state="6" />
+    <frame x="-4" y="22" width="1680" height="1024" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -397,7 +399,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Chapter4.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.776">
+        <state line="79" column="41" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.712">
           <folding />
         </state>
       </provider>
